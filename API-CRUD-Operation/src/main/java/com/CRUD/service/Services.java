@@ -10,5 +10,9 @@ public interface Services {
 
 	Product createProduct(Product product);
 
+	Product getid(int id);
+
+	
+
 
 }

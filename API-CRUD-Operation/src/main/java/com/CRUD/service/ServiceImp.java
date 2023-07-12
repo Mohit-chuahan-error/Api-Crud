@@ -16,14 +16,6 @@ public class ServiceImp implements Services {
 	@Autowired
 	private Repositry Repos;
 
-	ArrayList Ar=null;
-	
-	public ServiceImp() {
-		Ar=new ArrayList<>();
-		//public Product(int pid, String name, String brand, int price)
-		Ar.add(new Product(2,"mohit","bata",2000));
-	}
-	
 	@Override
 	public List<Product> getProduct() {
 		// TODO Auto-generated method stub
@@ -35,8 +27,13 @@ public class ServiceImp implements Services {
 		// TODO Auto-generated method stub
 		return Repos.save(product);
 	}
-	
-	
 
+	@Override
+	public Product getid(int id) {
+		// TODO Auto-generated method stub
+		return Repos.findById(id).orElse(null);
+		
+	}
 
+	
 }
