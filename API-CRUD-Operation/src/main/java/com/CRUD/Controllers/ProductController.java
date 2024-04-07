@@ -67,7 +67,7 @@ public class ProductController {
 	
 	  @PostMapping("duplicate")
 	    public ResponseEntity<Object> createProduct(@RequestBody Product product) {
-	        // Check if the product with the given ID already exists
+	        // Check if the product with the given mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmID already exists
 	        if (Services.existsById(product.getPid())) {
 	            return ResponseEntity.status(HttpStatus.CONFLICT)
 	                                 .body("Product with ID " + product.getPid() + " already exists");
