@@ -57,7 +57,7 @@ public class ProductController {
 		
 	}
 	
-	@GetMapping("byjdbctemp")
+	@GetMapping("byjdbcemp")
 	
 	public List<Map<String, Object>> getprice2(@RequestParam int price) {
 		
